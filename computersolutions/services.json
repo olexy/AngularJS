@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Hardware Repair",
+        "description": "Description 1",
+        "image": "computer-lcd-monitor-vector-300x269.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Virus Removal",
+        "description": "Description 2",
+        "image": "computer-lcd-monitor-vector-300x269.jpg"
+    },
+    {
+        "id": 3,
+        "name": "System Tuneup",
+        "description": "Description 3",
+        "image": "computer-lcd-monitor-vector-300x269.jpg"
+    }
+]

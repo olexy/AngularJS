@@ -1,9 +1,16 @@
+/* Styles go here */
+
 body {
   padding-top: 20px;
 }
 
 img{
   width:100%;
+}
+
+.service{
+  border-bottom: solid 1px #ccc;
+  padding:10px 0;
 }
 
 .footer {
