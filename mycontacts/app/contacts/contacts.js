@@ -98,40 +98,40 @@ app.controller('ContactsCtrl', ['$scope', '$firebaseArray', function($scope, $fi
         });
     };
 
-    // $scope.editFormSubmit = function(){
-    //     console.log('Updating Contact...');
+    $scope.editFormSubmit = function(){
+        console.log('Updating Contact...');
 
-    //     // Get ID
-    //     var id = $scope.id;
+        // Get ID
+        var id = $scope.id;
 
-    //     // Get Record
-    //     var record = $scope.contacts.$getRecord(id);
+        // Get Record from the specific ID
+        var record = $scope.data.$getRecord(id);
 
-    //     // Assign values
+        // Assign values
 
-    //     record.name                        = $scope.name;
-    //     record.email                       = $scope.email;
-    //     record.company                     = $scope.company;
-    //     record.phones[0].work              = $scope.work_phone;
-    //     record.phones[0].home              = $scope.home_phone;
-    //     record.phones[0].mobile            = $scope.mobile_phone;
-    //     record.address[0].street_address   = $scope.street_address;
-    //     record.address[0].city             = $scope.city;
-    //     record.address[0].state            = $scope.state;
-    //     record.address[0].zipcode          = $scope.zipcode;
+        record.name                        = $scope.name;
+        record.email                       = $scope.email;
+        record.company                     = $scope.company;
+        record.phones[0].work              = $scope.work_phone;
+        record.phones[0].home              = $scope.home_phone;
+        record.phones[0].mobile            = $scope.mobile_phone;
+        record.address[0].street_address   = $scope.street_address;
+        record.address[0].city             = $scope.city;
+        record.address[0].state            = $scope.state;
+        record.address[0].zipcode          = $scope.zipcode;
 
-    //     // Save contact
-    //     $scope.contacts.$save(record).then(function(ref){
-    //         console.log(ref.key);
-    //     });
+        // Save contact
+        $scope.data.$save(record).then(function(ref){
+            console.log(ref.key);
+        });
 
-    //     clearFields();
+        clearFields();
 
-    //     // Hide Form
-    //     $scope.editFormShow = false;
+        // Hide Form
+        $scope.editFormShow = false;
 
-    //     $scope.msg = "contact updated";
-    // };
+        $scope.msg = "contact updated";
+    };
 
     $scope.showContact = function(contact){
         console.log('Getting Contact....');
@@ -151,13 +151,13 @@ app.controller('ContactsCtrl', ['$scope', '$firebaseArray', function($scope, $fi
 
     };
 
-    // $scope.removeContact = function(contact){
-    //     console.log('Removing Contact');
+    $scope.removeContact = function(contact){
+        console.log('Removing Contact');
 
-    //     $scope.contacts.$remove(contact);
+        $scope.data.$remove(contact);
 
-    //     $scope.msg="contact Removed";
-    // };
+        $scope.msg="contact Removed";
+    };
 
     function clearFields(){
         console.log('Clearing All Fields...');
