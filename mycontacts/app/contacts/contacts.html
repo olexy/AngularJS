@@ -1,6 +1,7 @@
 <div class="row" ng-controller="ContactsCtrl">
 <div class="large-10 columns">
 	<div data-alert ng-show="msg" class="alert-box">{{msg}}</div>
+
 <!-- Add Contact -->
 <form ng-submit="addFormSubmit()" ng-show="addFormShow">
     <h3>Add Contacts</h3>
@@ -74,7 +75,7 @@
     </div>
 </form>
 	
-	    <h3>You Contacts (3)</h3>
+	<h3>You Contacts (3)</h3>
 	    <table>
 	    	<thead>
 	    		<tr>
@@ -85,7 +86,7 @@
 	    		</tr>
 	    	</thead>
 	    	<tbody>
-	    		<tr ng-repeat="contact in contacts">
+	    		<tr ng-repeat="contact in data">
 		    		<td><a href="#">{{contact.name}}</a></td>
 		    		<td>{{contact.compnay}}</td>
 		    		<td>{{contact.email}}</td>

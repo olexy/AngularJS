@@ -15,6 +15,7 @@ app.controller('ContactsCtrl', ['$scope', '$firebaseArray', function($scope, $fi
     var ref = firebase.database().ref();
   // download the data into a local object
   $scope.data = $firebaseArray(ref);
+  console.log($scope.data);
   // putting a console.log here won't work, see below
 
    //Show Add form
@@ -80,9 +81,11 @@ app.controller('ContactsCtrl', ['$scope', '$firebaseArray', function($scope, $fi
                     zipcode: zipcode
                 }
             ]
-        }).then(function(ref){
-            var id = ref.key();
-            console.log('Added Contact with ID: ' +id);
+        }).then(function(config){
+            var list = $firebaseArray(ref);
+            var rec = list.$getRecord(ref)
+            // var id = ref.key();
+            console.log('Added Contact with ID: ' +rec);
 
             // Clear Form
             clearFields();
