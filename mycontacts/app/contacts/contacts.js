@@ -42,7 +42,7 @@ app.controller('ContactsCtrl', ['$scope', '$firebaseArray', function($scope, $fi
      //Hide form
     $scope.hide = function(){
         $scope.addFormShow = false;
-        // $scope.contactShow = false;
+        $scope.contactShow = false;
     };
 
      //Submit Contact
@@ -133,23 +133,23 @@ app.controller('ContactsCtrl', ['$scope', '$firebaseArray', function($scope, $fi
     //     $scope.msg = "contact updated";
     // };
 
-    // $scope.showContact = function(contact){
-    //     console.log('Getting Contact....');
+    $scope.showContact = function(contact){
+        console.log('Getting Contact....');
 
-    //     $scope.name = contact.name;
-    //     $scope.email = contact.email;
-    //     $scope.company = contact.company;
-    //     $scope.work_phone = contact.phones[0].work;
-    //     $scope.home_phone = contact.phones[0].home;
-    //     $scope.mobile_phone = contact.phones[0].mobile;
-    //     $scope.street_address = contact.address[0].street_address;
-    //     $scope.city = contact.address[0].city;
-    //     $scope.state = contact.address[0].state;
-    //     $scope.zipcode = contact.address[0].zipcode;
+        $scope.name = contact.name;
+        $scope.email = contact.email;
+        $scope.company = contact.company;
+        $scope.work_phone = contact.phones[0].work;
+        $scope.home_phone = contact.phones[0].home;
+        $scope.mobile_phone = contact.phones[0].mobile;
+        $scope.street_address = contact.address[0].street_address;
+        $scope.city = contact.address[0].city;
+        $scope.state = contact.address[0].state;
+        $scope.zipcode = contact.address[0].zipcode;
 
-    //     $scope.contactShow = true;
+        $scope.contactShow = true;
 
-    // };
+    };
 
     // $scope.removeContact = function(contact){
     //     console.log('Removing Contact');
