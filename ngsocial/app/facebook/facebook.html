@@ -34,11 +34,11 @@
       </div>
       <div class="col-md-8">
         <h3>Welcome to Facebook</h3>
-        <div class="well" ng-if="isLoggedIn == true"
-          <form>
+        <div class="well" ng-if="isLoggedIn == true">
+          <form ng-submit="postStatus()">
             <div class="form-group">
               <label>Status Update</label>
-              <textarea class="form-control"></textarea>            
+              <textarea ng-model="body" class="form-control"></textarea>            
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
@@ -53,5 +53,7 @@
             </div>
           </div>
         </div>
+         <div class="well" ng-if="isLoggedIn == false">
+         <p>You need to log in to post</p>
       </div>
     </div>     

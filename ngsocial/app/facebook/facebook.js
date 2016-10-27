@@ -67,6 +67,14 @@ angular.module('ngSocial.facebook', ['ngRoute','ngFacebook'])
     });
   }
 
+  $scope.postStatus = function(){
+    var body = this.body;
+    $facebook.api('/me/feed', 'post', {message: body}).then(function(response){
+      $scope.msg = 'Thanks for Posting';
+      refresh();
+    });
+  }
+
   refresh();
 
 }]);
