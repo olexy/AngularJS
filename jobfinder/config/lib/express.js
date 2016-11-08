@@ -183,7 +183,7 @@ module.exports.initModulesServerPolicies = function (app) {
 module.exports.initModulesServerRoutes = function (app) {
   // Globbing routing files
   config.files.server.routes.forEach(function (routePath) {
-    require(path.resolve(routePath))(app);
+      require(path.resolve(routePath))(app);
   });
 };
 
