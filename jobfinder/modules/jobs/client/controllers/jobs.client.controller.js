@@ -8,7 +8,7 @@
 
   JobsController.$inject = ['$scope', '$state', '$window', 'Authentication', 'jobResolve'];
 
-  function JobsController ($scope, $state, $window, Authentication, job) {
+  function JobsController ($scope, $state, $window, Authentication, job {
     var vm = this;
 
     vm.authentication = Authentication;
