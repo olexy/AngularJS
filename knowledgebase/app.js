@@ -1,3 +1,5 @@
+"use strict";
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -7,6 +9,8 @@ var bodyParser = require('body-parser');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var db = mongoose.connection;
+
+mongoose.connect('mongodb://localhost/knowledgebase');
 
 var routes = require('./routes/index');
 var articles = require('./routes/articles');
