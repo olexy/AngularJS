@@ -1,0 +1,16 @@
+<div ng-controller="CategoryDetailsCtrl">
+    <a href="#/cartegories">Go Back</a>
+    <h1>{{category.name}}</h1>
+    <hr/>
+    <div>
+        {{category.description}}
+    </div>
+    <br/><br/>
+    <div class="actions">
+        <a href="#/categories/edit/{{category._id}}" class="btn btn-default">Edit</a>
+        <a href="#" class="btn btn-danger" ng-click="removeCategory()">Delete</a>
+    </div>
+
+    <br/><br/>
+
+</div>

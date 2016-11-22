@@ -30,6 +30,7 @@ router.get('/category/:category', function(req, res, next) {
   });
 });
 
+//POST REQUESTS
 router.post('/', function(req, res, next){
     // Get Form Values
     var title = req.body.title;

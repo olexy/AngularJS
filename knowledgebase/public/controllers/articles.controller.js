@@ -27,11 +27,6 @@ angular.module("kB")
                 console.log(data);
             });
 
-
-        // $http.delete('/articles/'+$routeParams.id).success(function(data){
-        //     console.log(data);
-        // });
-
         $location.path('/articles');
 
     };
