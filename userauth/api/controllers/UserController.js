@@ -90,6 +90,21 @@ module.exports = {
 				}
 			})
 		})
+	},
+
+	logout: function(req, res){
+		User.findOne({id: req.session.me}, function(err, user){
+			if(err){
+				return res.negotiate(err);
+			}
+			if(!user){
+				return res.notFound();
+			}
+
+			req.session.me = null; //get rid of the session
+
+			return res.redirect('/');
+		})
 	}
 	
 };
