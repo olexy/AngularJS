@@ -1,4 +1,4 @@
-var app = angular.module('galPhoto',['ngRoute']);
+var app = angular.module('instGallery',['ngRoute']);
 
 app.config(['$routeProvider', function($routeProvider){
 	$routeProvider.
