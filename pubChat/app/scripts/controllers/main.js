@@ -9,9 +9,10 @@
  */
 angular.module('pubChatApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    // this.awesomeThings = [
+    //   'HTML5 Boilerplate',
+    //   'AngularJS',
+    //   'Karma'
+    // ];
+    console.log('MainCtrl initialized');
   });
