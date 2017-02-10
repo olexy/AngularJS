@@ -1,0 +1,19 @@
+<div class="container" ng-controller="mainController">
+  <div class="row">
+    <div class="col-md-4">
+     
+      <ul>
+        <li ng-repeat="item in devListResult track by $index"><a style="cursor: pointer;" ng-click="viewDetail($index)">{{item.login}}</a></li>
+      </ul>
+    </div>
+    <div class="col-md-8">
+      <div class="panel">
+        <div class="panel-header">Detail</div>
+        <div class="panel-body">
+          <img ng-src="{{devListResult[selectedIndex].avatar_url}}" alt="">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

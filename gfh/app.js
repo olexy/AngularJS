@@ -26,7 +26,7 @@ weatherApp.controller('HomeController', ['$scope', 'cityService', function($scop
     
     $scope.city = cityService.city;
     
-    $scope.$watch('city', function() {
+    $scope.$watch('city', function() {  //Watch the city in the service for chang
         cityService.city = $scope.city; 
     });
        
